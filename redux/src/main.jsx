@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-// import action from './redux/action'
-import { valueAdd, valueReduce } from './redux/action'
+import * as action from './redux/action'
+// import { valueAdd, valueReduce } from './redux/action'
 
 @connect(
-  ({number}) => ({number}),
-  dispatch => bindActionCreators(valueAdd, dispatch)
+  ({ number, payload }) => ({ number, payload }),
+  dispatch => bindActionCreators(action, dispatch)
 )
 class Main extends Component {
   render () {
@@ -14,8 +14,8 @@ class Main extends Component {
       <div className="App">
         <header className="App-header">
           <p onClick={() => this.props.valueAdd()} > 点击 + 1 </p>
-          {/* <p onClick={() => this.props.valueReduce()} > 点击 - 1 </p> */}
-          <div> i am {this.props.number} </div>
+          <p onClick={() => this.props.valueReduce()} > 点击 - 1 </p>
+          <div> message is {this.props.payload} ,i am {this.props.number} </div>
         </header>
       </div>
     )
