@@ -1,11 +1,10 @@
-import { ACTION_ADD, ACTION_REDUCER } from './action_type'
+import { ACTION_ADD, ACTION_REDUCER, ACTION_ADD_SAGA } from './action_type'
 import {getData} from './server'
 
-export const valueAdd = (w) => {
+export const valueAdd = () => {
   return {
-    type: ACTION_ADD,
-    msg: '增加值',
-    payload: getData()
+    type: ACTION_ADD_SAGA,
+    msg: '增加值'
   }
 }
 
