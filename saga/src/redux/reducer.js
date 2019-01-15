@@ -8,8 +8,11 @@ export default (state = {number: 0}, action) => {
     case ACTION_ADD:
       state = Object.assign({}, { number: number + 1, payload })
       break;
-    default:
+    case ACTION_REDUCER:
       state = Object.assign({}, { number: number - 1, payload })
+      break;
+    default:
+      state = Object.assign({}, { number, payload })
       break;
   }
   return state

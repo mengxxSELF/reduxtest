@@ -13,8 +13,8 @@ class Main extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p onClick={() => this.props.valueAdd()} > 点击 + 1 </p>
-          <p onClick={() => this.props.valueReduce()} > 点击 - 1 </p>
+          <p onClick={this.props.valueAdd} > 点击 + 1 </p>
+          <p onClick={this.props.valueReduce} > 点击 - 1 </p>
           <div> message is {this.props.payload} ,i am {this.props.number} </div>
         </header>
       </div>
