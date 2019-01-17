@@ -1,0 +1,14 @@
+
+html, body, :global(#root) {
+  height: 100%;
+  padding: 40px;
+  background: #6db2eb;
+}
+
+p {
+  border-radius: 4px;
+  background: #fff;
+  padding: 4px 8px;
+  color: #000;
+}
+
